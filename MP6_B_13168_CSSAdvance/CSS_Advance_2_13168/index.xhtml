@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran Workshop</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2d3748;
+            margin: 0;
+            padding: 30px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a365d;
+            margin-bottom: 6px;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #2b6cb0;
+            font-size: 16px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        table, tr, td {
+            border: none !important;
+        }
+
+        td {
+            padding: 10px 6px;
+            vertical-align: middle;
+        }
+
+        td.top-align {
+            vertical-align: top;
+        }
+
+        label {
+            font-weight: 600;
+            color: #4a5568;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+        }
+
+        input[type="text"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4299e1;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+            outline: none;
+        }
+
+        input[type="file"] {
+            font-size: 13px;
+            color: #4a5568;
+        }
+
+        .options-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 4px;
+        }
+
+        .option-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: normal;
+            cursor: pointer;
+            color: #4a5568;
+        }
+
+        p {
+            margin: 0 0 8px 0;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #3182ce 100%, #2b6cb0 100%);
+            box-shadow: 0 6px 15px rgba(66, 153, 225, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Pendaftaran Workshop</h1>
+        <div class="subtitle">Silakan isi formulir di bawah ini dengan data yang valid.</div>
+
+        <form action="" method="post" enctype="multipart/form-data">
+
+            <h3>Data Peserta</h3>
+            <table>
+                <tr>
+                    <td style="width:32%;">
+                        <label for="nama">Nama Lengkap</label>
+                    </td>
+                    <td><input type="text" id="nama" name="nama" size="30" placeholder="Masukkan nama lengkap" /></td>
+                </tr>
+                <tr>
+                    <td style="width:32%;">
+                        <label for="nim">NIM</label>
+                    </td>
+                    <td><input type="text" id="nim" name="nim" size="30" placeholder="Masukkan NIM Anda" /></td>
+                </tr>
+                <tr>
+                    <td style="width:32%;">
+                        <label>Jenis Kelamin</label>
+                    </td>
+                    <td>
+                        <div class="options-group">
+                            <label class="option-item"><input type="radio" id="laki" name="jk" value="Laki-laki" /> Laki-laki</label>
+                            <label class="option-item"><input type="radio" id="perempuan" name="jk" value="Perempuan" /> Perempuan</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:32%;">
+                        <label for="prodi">Program Studi</label>
+                    </td>
+                    <td>
+                        <select id="prodi" name="prodi">
+                            <option value="" disabled="disabled" selected="selected">-- Pilih Program Studi --</option>
+                            <option>Informatika</option>
+                            <option>Sistem Informasi</option>
+                            <option>Teknik Industri</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <h3>Pilihan Workshop</h3>
+            <table>
+                <tr>
+                    <td style="width:32%;">
+                        <label>Jenis Peserta</label>
+                    </td>
+                    <td>
+                        <div class="options-group">
+                            <label class="option-item"><input type="radio" id="mahasiswa" name="peserta" value="Mahasiswa" /> Mahasiswa</label>
+                            <label class="option-item"><input type="radio" id="umum" name="peserta" value="Umum" /> Umum</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:32%" class="top-align">
+                        <label>Materi Workshop</label>
+                    </td>
+                    <td>
+                        <p>
+                            <label class="option-item"><input type="checkbox" id="uiux" name="materi" value="UI/UX Design" /> UI/UX Design</label>
+                        </p>
+                        <p>
+                            <label class="option-item"><input type="checkbox" id="webdev" name="materi" value="Web Development" /> Web Development</label>
+                        </p>
+                        <p>
+                            <label class="option-item"><input type="checkbox" id="data" name="materi" value="Data Analysis" /> Data Analysis</label>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            <h3>Informasi Tambahan</h3>
+            <table>
+                <tr>
+                    <td style="width:32%;" class="top-align">
+                        <label for="alasan">Alasan Mengikuti Workshop</label>
+                    </td>
+                    <td>
+                        <textarea id="alasan" name="alasan" rows="6" cols="30" placeholder="Tuliskan alasan atau motivasi Anda..."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:32%;">
+                        <label>Jenis Pembayaran</label>
+                    </td>
+                    <td>
+                        <div class="options-group">
+                            <label class="option-item"><input type="radio" id="qris" name="pembayaran" value="QRIS" /> QRIS</label>
+                            <label class="option-item"><input type="radio" id="transfer" name="pembayaran" value="Transfer Bank" /> Transfer Bank</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:32%;">
+                        <label for="bukti">Bukti Pembayaran</label>
+                    </td>
+                    <td>
+                        <input type="file" id="bukti" name="bukti" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center; padding-top: 20px;">
+                        <input type="submit" class="btn-submit" name="daftar" value="Kirim Pendaftaran" />
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+</body>
+</html>

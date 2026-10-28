@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran Organisasi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2d3748;
+            margin: 0;
+            padding: 30px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a365d;
+            margin-bottom: 8px;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 12px 8px;
+            vertical-align: middle;
+        }
+
+        td.top-align {
+            vertical-align: top;
+        }
+
+        label {
+            font-weight: 600;
+            color: #4a5568;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+        }
+
+        input[type="text"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4299e1;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+            outline: none;
+        }
+
+        input[type="file"] {
+            font-size: 13px;
+            color: #4a5568;
+        }
+
+        .options-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 6px;
+        }
+
+        .option-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: normal;
+            cursor: pointer;
+            color: #4a5568;
+        }
+
+        .sub-section {
+            background: #f7fafc;
+            padding: 14px 16px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #edf2f7;
+            transition: background 0.2s;
+        }
+
+        .sub-section:hover {
+            background: #edf2f7;
+        }
+
+        .sub-section-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #2b6cb0;
+            margin-bottom: 8px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #3182ce 100%, #2b6cb0 100%);
+            box-shadow: 0 6px 15px rgba(66, 153, 225, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Pendaftaran Organisasi</h1>
+        <div class="subtitle">Silakan isi data diri Anda dengan lengkap dan benar di bawah ini.</div>
+
+        <form action="" method="post" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td>
+                        <label for="nama">Nama Lengkap</label>
+                    </td>
+                    <td><input type="text" id="nama" name="nama" size="30" placeholder="Masukkan nama lengkap" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="nim">NIM</label>
+                    </td>
+                    <td>
+                        <input type="text" id="nim" name="nim" size="30" placeholder="Masukkan NIM Anda" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="prodi">Program Studi</label>
+                    </td>
+                    <td>
+                        <select id="prodi" name="prodi">
+                            <option value="" disabled="disabled" selected="selected">-- Pilih Program Studi --</option>
+                            <option>Informatika</option>
+                            <option>Sistem Informasi</option>
+                            <option>Teknik Industri</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="email">Alamat Email Aktif</label>
+                    </td>
+                    <td><input type="text" id="email" name="email" size="30" placeholder="nama@email.com" /></td>
+                </tr>
+                <tr>
+                    <td><label for="telepon">Nomor Telepon / WhatsApp</label>
+                    </td>
+                    <td>
+                        <input type="text" id="telepon" name="telepon" size="30" placeholder="08xxxxxxxxxx" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Jenis Kelamin</label></td>
+                    <td>
+                        <div class="options-group">
+                            <label class="option-item"><input type="radio" id="laki" name="jk" value="Laki-Laki" /> Laki-Laki</label>
+                            <label class="option-item"><input type="radio" id="perempuan" name="jk" value="Perempuan" /> Perempuan</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="semester">Semester</label>
+                    </td>
+                    <td>
+                        <select id="semester" name="semester">
+                            <option value="" disabled="disabled" selected="selected">-- Pilih Semester --</option>
+                            <option>Semester 1</option>
+                            <option>Semester 2</option>
+                            <option>Semester 3</option>
+                            <option>Semester 4</option>
+                            <option>Semester 5</option>
+                            <option>Semester 6</option>
+                            <option>Semester 7</option>
+                            <option>Semester 8</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Divisi yang Diminati</label>
+                    </td>
+                    <td>
+                        <div class="options-group">
+                            <label class="option-item"><input type="radio" id="acara" name="divisi" value="Acara" /> Acara</label>
+                            <label class="option-item"><input type="radio" id="sdm" name="divisi" value="SDM" /> SDM</label>
+                            <label class="option-item"><input type="radio" id="humas" name="divisi" value="Humas" /> Humas</label>
+                            <label class="option-item"><input type="radio" id="media" name="divisi" value="Media" /> Media</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="top-align">
+                        <label>Pengalaman &amp; Keahlian</label>
+                    </td>
+                    <td>
+                        <div class="sub-section">
+                            <span class="sub-section-title">Kegiatan:</span>
+                            <div class="options-group">
+                                <label class="option-item"><input type="checkbox" id="kepanitiaan" name="pengalaman" value="Kepanitiaan" /> Kepanitiaan</label>
+                                <label class="option-item"><input type="checkbox" id="organisasi" name="pengalaman" value="Organisasi" /> Organisasi</label>
+                                <label class="option-item"><input type="checkbox" id="volunteer" name="pengalaman" value="Volunteer" /> Volunteer</label>
+                            </div>
+                        </div>
+                        <div class="sub-section">
+                            <span class="sub-section-title">Kemampuan:</span>
+                            <div class="options-group">
+                                <label class="option-item"><input type="checkbox" id="publicspeaking" name="kemampuan" value="Public Speaking" /> Public Speaking</label>
+                                <label class="option-item"><input type="checkbox" id="desain" name="kemampuan" value="Desain" /> Desain</label>
+                                <label class="option-item"><input type="checkbox" id="fotografi" name="kemampuan" value="Fotografi" /> Fotografi</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="top-align">
+                        <label for="alasan">Motivasi Bergabung</label>
+                    </td>
+                    <td>
+                        <textarea id="alasan" name="alasan" rows="6" cols="30" placeholder="Tuliskan alasan Anda bergabung..."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="cv">Unggah CV (PDF)</label>
+                    </td>
+                    <td>
+                        <input type="file" id="cv" name="cv" accept="application/pdf" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center; padding-top: 15px;">
+                        <input type="submit" class="btn-submit" name="daftar" value="Kirim Pendaftaran" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
